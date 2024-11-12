@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <!-- Import Vue.js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <body>
     <div id="app">
@@ -14,6 +15,16 @@
 
       <h1>{{ intro }}</h1>
       
+      <button v-on:click="GetAllCars">Get all cars</button>
+
+      <h1>carlist</h1>
+      <ul >
+        <li v-for="car in carlist">
+          {{car.vendor}} - {{car.model}} </li>
+      </ul>
+
+
+
     </div>
 
     <!-- Import App -->
